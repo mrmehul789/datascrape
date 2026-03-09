@@ -3,7 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Scrape — Myntra Scraping & Email Intelligence API</title>
+
+<!-- PRIMARY SEO -->
+<title>DataScrape — Myntra Product Data Scraping & Email Intelligence API India</title>
+<meta name="description" content="Get real-time Myntra product data — prices, stock, ratings, images, discounts — delivered as Excel, CSV or JSON. Email enrichment API for business intelligence. Trusted web scraping service in India.">
+<meta name="keywords" content="myntra scraping service, myntra product data, myntra price tracker, myntra data extraction, web scraping india, email lookup api, email enrichment api, ecommerce data scraping, myntra api, data scraping service india, web scraper india, myntra competitor analysis, product data extraction, email intelligence, business email lookup">
+<meta name="author" content="DataScrape">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.datascrape.in/">
+
+<!-- OPEN GRAPH (WhatsApp, LinkedIn, Facebook previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.datascrape.in/">
+<meta property="og:title" content="DataScrape — Myntra Scraping & Email Intelligence API">
+<meta property="og:description" content="Real-time Myntra product data and email enrichment API for Indian businesses. Get prices, stock, ratings, images — delivered as Excel or JSON. Try free.">
+<meta property="og:site_name" content="DataScrape">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DataScrape — Myntra Scraping & Email Intelligence API">
+<meta name="twitter:description" content="Real-time Myntra product data scraping and email enrichment API. Try free demo — no signup needed.">
+
+<!-- STRUCTURED DATA (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DataScrape",
+  "url": "https://www.datascrape.in",
+  "description": "Web scraping and data extraction service specializing in Myntra product data and email intelligence API for Indian businesses.",
+  "areaServed": "India",
+  "serviceType": ["Web Scraping", "Data Extraction", "Email Enrichment", "API Services"],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Myntra Product Data Scraping",
+      "description": "Extract Myntra product data including prices, stock, ratings, images and discounts",
+      "price": "2000",
+      "priceCurrency": "INR"
+    },
+    {
+      "@type": "Offer", 
+      "name": "Email Intelligence API",
+      "description": "Business email enrichment with company info, person details, LinkedIn and risk scoring"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": ["English", "Hindi"]
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -78,6 +130,17 @@
   nav a:hover { color: var(--accent); }
 
   .nav-links { display: flex; gap: 32px; align-items: center; }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
   .nav-cta {
     background: var(--accent);
@@ -305,9 +368,83 @@
 
   @media (max-width: 768px) {
     .tools-grid { grid-template-columns: 1fr; }
-    nav { padding: 16px 20px; }
-    .nav-links { gap: 16px; }
-    .stat { padding: 24px 28px; }
+    nav { padding: 14px 18px; }
+    .nav-links { gap: 12px; }
+    .stat { padding: 22px 20px; }
+
+    /* NAV — hide middle links, keep logo + CTA */
+    .nav-links a:not(.nav-cta) { display: none; }
+
+    /* HERO */
+    .hero { padding: 96px 20px 56px; }
+    h1 { font-size: 36px; letter-spacing: -1px; }
+    .hero-sub { font-size: 15px; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+
+    /* STATS — 2x2 grid on mobile */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 40px 20px 56px;
+      gap: 12px;
+      justify-content: center;
+    }
+    .stat {
+      min-width: 0;
+      flex-shrink: 1;
+      border-radius: 12px;
+    }
+
+    /* SECTION */
+    section { padding: 56px 20px; }
+    .section-title { font-size: 28px; }
+
+    /* TOOL CARDS */
+    .tool-card { padding: 24px 18px; }
+    .tool-title { font-size: 17px; }
+
+    /* DEMO INPUT ROW — stack on very small screens */
+    .demo-input-row { flex-direction: column; gap: 8px; }
+    .demo-btn { width: 100%; padding: 13px; font-size: 14px; }
+    .demo-input { font-size: 14px; padding: 13px 14px; }
+
+    /* TABS */
+    .tab { font-size: 12px; padding: 8px 6px; }
+
+    /* PRODUCTS GRID — 2 columns on mobile */
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+    /* SERVICES */
+    .services-grid { grid-template-columns: 1fr; gap: 14px; }
+    .service-card { padding: 22px 18px; }
+
+    /* PRICING */
+    .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+    .price-card { padding: 28px 20px; }
+    .price-amount { font-size: 32px; }
+
+    /* CONTACT */
+    .contact-section { padding: 40px 24px; margin: 0 16px 60px; }
+    .contact-options { flex-direction: column; align-items: center; }
+    .contact-btn { width: 100%; justify-content: center; }
+
+    /* EMAIL RESULT */
+    .email-result-row { flex-direction: column; gap: 4px; align-items: flex-start; }
+    .email-result-val { text-align: left; max-width: 100%; }
+
+    /* TRIAL BADGE */
+    .trial-badge { font-size: 10px; }
+
+    /* PROTECTION NOTE */
+    .protection-note { font-size: 11px; }
+  }
+
+  /* Extra small phones */
+  @media (max-width: 380px) {
+    h1 { font-size: 32px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .tool-card { padding: 18px 14px; }
   }
 
   .tool-card {
@@ -572,10 +709,6 @@
     margin-top: 48px;
   }
 
-  @media (max-width: 768px) {
-    .services-grid { grid-template-columns: 1fr; }
-  }
-
   .service-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -617,10 +750,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 48px;
-  }
-
-  @media (max-width: 768px) {
-    .pricing-grid { grid-template-columns: 1fr; }
   }
 
   .price-card {
@@ -879,6 +1008,185 @@
   }
 
   .protection-note span { color: var(--accent3); }
+
+  /* MOBILE LAYOUT OVERRIDES */
+  @media (max-width: 768px) {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .orb {
+      display: none;
+    }
+
+    nav {
+      padding: 14px 18px;
+      justify-content: flex-start;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .hero {
+      padding: 96px 20px 56px;
+    }
+
+    h1 {
+      font-size: 36px;
+      letter-spacing: -1px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* STATS — 2x2 grid on mobile */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 40px 20px 56px;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .stat {
+      padding: 22px 20px;
+      min-width: 0;
+      flex-shrink: 1;
+      border-radius: 12px;
+    }
+
+    /* SECTION */
+    section {
+      padding: 56px 20px;
+    }
+
+    .section-title {
+      font-size: 28px;
+    }
+
+    /* TOOL CARDS */
+    .tool-card {
+      padding: 24px 18px;
+    }
+
+    .tool-title {
+      font-size: 17px;
+    }
+
+    /* DEMO INPUT ROW — stack on very small screens */
+    .demo-input-row {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .demo-btn {
+      width: 100%;
+      padding: 13px;
+      font-size: 14px;
+    }
+
+    .demo-input {
+      font-size: 14px;
+      padding: 13px 14px;
+    }
+
+    /* TABS */
+    .tab {
+      font-size: 12px;
+      padding: 8px 6px;
+    }
+
+    /* PRODUCTS GRID — 2 columns on mobile */
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .service-card {
+      padding: 22px 18px;
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .price-card {
+      padding: 28px 20px;
+    }
+
+    .price-amount {
+      font-size: 32px;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      padding: 40px 24px;
+      margin: 0 16px 60px;
+    }
+
+    .contact-options {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* EMAIL RESULT */
+    .email-result-row {
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+    }
+
+    .email-result-val {
+      text-align: left;
+      max-width: 100%;
+    }
+
+    /* TRIAL BADGE */
+    .trial-badge {
+      font-size: 10px;
+    }
+
+    /* PROTECTION NOTE */
+    .protection-note {
+      font-size: 11px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -886,6 +1194,7 @@
 <!-- NAV -->
 <nav>
   <div class="logo">Data<span>Scrape</span></div>
+  <button class="menu-toggle">☰</button>
   <div class="nav-links">
     <a href="#tools">Live Demo</a>
     <a href="#services">Services</a>
@@ -911,7 +1220,7 @@
 
   <p class="hero-sub">
     Myntra product intelligence & email enrichment APIs built for serious businesses. 
-    Bypass bot protection, get clean structured data, delivered instantly.
+    Get clean structured data, delivered instantly.
   </p>
 
   <div class="hero-actions">
@@ -952,7 +1261,7 @@
     <div class="tool-card full-tool">
       <div class="tool-icon icon-green">🛍️</div>
       <div class="tool-title">Myntra Product Scraper</div>
-      <p class="tool-desc">Search by keyword or product ID. Get full product data including prices, stock, images, ratings, coupons and more — bypassing all bot protection.</p>
+      <p class="tool-desc">Search by keyword or product ID. Get full product data including prices, stock, images, ratings, coupons and more — delivered instantly and reliably.</p>
 
       <div class="trial-badge">🔒 FREE TRIAL — 50 results per search</div>
 
@@ -1040,7 +1349,7 @@
     <div class="service-card">
       <div class="service-tag">Custom</div>
       <div class="service-title">Any Website Scraper</div>
-      <p class="service-desc">Need data from a specific website? We build custom scrapers with anti-bot bypass, proxy rotation, and automated delivery pipelines.</p>
+      <p class="service-desc">Need data from a specific website? We build custom scrapers with reliable delivery, proxy rotation, and automated data pipelines.</p>
     </div>
     <div class="service-card">
       <div class="service-tag">API</div>
@@ -1123,23 +1432,54 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
       WhatsApp Now
     </a>
-    <a href="mailto:kingtester052@gmail.com" class="contact-btn email-btn">
+    <a href="mailto:kingtester052@gmail.com
+    " class="contact-btn email-btn">
       ✉️ kingtester052@gmail.com
     </a>
   </div>
 </div>
 
+<!-- SEO CONTENT -->
+<section style="max-width:1100px;margin:0 auto;padding:40px 24px 20px;position:relative;z-index:1">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px">
+    <h2 style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;margin-bottom:20px;letter-spacing:-0.5px">Myntra Product Data Scraping Service in India</h2>
+    <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:16px">
+      DataScrape provides professional <strong style="color:var(--text)">Myntra scraping services</strong> for ecommerce businesses, fashion brands, resellers and market research firms across India. Extract real-time product data including prices, MRP, discount percentages, stock availability, product images, ratings, review counts, sizes, colours and coupon codes.
+    </p>
+    <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:16px">
+      Our <strong style="color:var(--text)">Myntra data extraction API</strong> delivers structured data in Excel, CSV or JSON format — ready for competitor price analysis, inventory tracking, catalog building, and market intelligence. Ideal for D2C fashion brands, Myntra sellers, dropshippers and ecommerce agencies.
+    </p>
+    <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:24px">
+      Our <strong style="color:var(--text)">email intelligence API</strong> enriches any business email address with full company profile, person details, LinkedIn URLs, location, employee count and risk scoring — perfect for sales teams, recruiters and lead generation agencies in India.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Myntra Price Tracker</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Myntra Product Scraper</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Myntra Data Extraction</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Ecommerce Data Scraping</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Web Scraping India</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Email Lookup API</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Email Enrichment API</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Competitor Price Analysis</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Myntra Seller Tools</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Fashion Data API India</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Lead Generation India</div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">Business Email Verification</div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Data Scrape</div>
-  <p>© 2026 Data Scrape. Real-time data scraping & API solutions.</p>
+  <div class="footer-logo">DataScrape</div>
+  <p>© 2026 DataScrape.in — Real-time Myntra data scraping & email intelligence API, India.</p>
   <p style="margin-top:8px; font-size:11px;">All scraping is performed ethically and in compliance with applicable terms of service.</p>
 </footer>
 
 <script>
   // ============ STATE ============
   const MYNTRA_API = 'https://classification-gras-heavy-guarantee.trycloudflare.com';
-  const EMAIL_API = 'https://iso-pulling-aud-switched.trycloudflare.com'; // Update with forwarded port
+  const EMAIL_API = 'https://witnesses-frontier-mighty-implied.trycloudflare.com';
 
   // Rate limiting (client-side, basic abuse prevention)
   const rateLimits = {
@@ -1239,6 +1579,20 @@
     document.getElementById('keyword-input').addEventListener('keydown', e => { if (e.key === 'Enter') searchMyntra(); });
     document.getElementById('pid-input').addEventListener('keydown', e => { if (e.key === 'Enter') searchByProductId(); });
     document.getElementById('email-input').addEventListener('keydown', e => { if (e.key === 'Enter') lookupEmail(); });
+
+    const nav = document.querySelector('nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav) nav.classList.remove('open');
+      });
+    });
   });
 
   // ============ MYNTRA PRODUCT ID ============
@@ -1322,7 +1676,10 @@
     document.getElementById('email-result').style.display = 'none';
 
     try {
-      const res = await fetch(`${EMAIL_API}/email=${encodeURIComponent(email)}`);
+      const res = await fetch(`${EMAIL_API}/email=${email}`, {
+        mode: 'cors',
+        headers: { 'Accept': 'application/json' }
+      });
       const data = await res.json();
       showEmailResult(data);
     } catch (err) {
@@ -1362,17 +1719,4 @@
       ['Company Location', [c.location?.city, c.location?.state, c.location?.country].filter(Boolean).join(', ') || '—'],
       ['Company LinkedIn', c.social?.linkedin_url ? `<a href="${c.social.linkedin_url}" target="_blank" style="color:var(--accent2)">View Company →</a>` : '—'],
       ['Risk Score', c.risk_profile ? `<span style="color:${c.risk_profile === 'high_risk' ? '#ff6b6b' : 'var(--accent)'}">${c.risk_profile}</span>` : '—'],
-      ['Blacklisted', e.blacklisted ? '<span style="color:#ff6b6b">Yes</span>' : '<span style="color:var(--accent)">No</span>'],
-    ];
-
-    el.innerHTML = rows.map(([k,v]) => `
-      <div class="email-result-row">
-        <span class="email-result-key">${k}</span>
-        <span class="email-result-val">${v}</span>
-      </div>
-    `).join('');
-  }
-</script>
-
-</body>
-</html>
+      ['Blacklisted', e.blacklisted ? '<span style="color:#ff6b6b">Yes</span>' : '<span style="color:var(--accent)">No</span>']
